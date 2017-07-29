@@ -1,41 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.engima.mapps.enigma.MainActivity">
+    tools:context="com.engima.mapps.enigma.MainActivity"
+    android:id="@+id/drawerlayout">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/maxresdefault"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.engima.mapps.enigma.MainActivity">
 
-    <Button
-        android:id="@+id/Playgame"
-        android:layout_width="345dp"
-        android:layout_height="210dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#85554d4d"
-        android:text="Play Game"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorHint="@android:color/holo_blue_light"
-        android:textSize="40sp"
-        android:onClick="gotogamepage"
-        android:textStyle="normal|bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#11ffffff"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/enigma"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/nav_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark">
+
+        </android.support.v7.widget.Toolbar>
+
+        <Button
+            android:id="@+id/Playgame"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="240dp"
+            android:layout_height="108dp"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="#00000000"
+            android:fontFamily="sans-serif-smallcaps"
+            android:onClick="gotogamepage"
+            android:text="Hot Seat"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorHint="@android:color/holo_blue_light"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.851"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/single"
+            android:layout_width="@android:dimen/thumbnail_height"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="67dp"
+            android:background="@color/transparent"
+            android:onClick="gotosingleplayer"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Single player"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_below="@+id/nav_action"
+            android:layout_alignStart="@+id/Playgame"
+            android:layout_marginStart="10dp" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header">
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

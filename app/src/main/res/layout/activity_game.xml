@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,56 +12,57 @@
 
     <EditText
         android:id="@+id/s1"
-        android:layout_width="63dp"
-        android:layout_height="49dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
-        android:maxLength="1"
         android:inputType="number"
+        android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/player1"
-        app:layout_constraintVertical_bias="0.177"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/s2"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/player1"
+        app:layout_constraintVertical_bias="0.406" />
 
     <EditText
         android:id="@+id/s2"
-        android:layout_width="62dp"
-        android:layout_height="52dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
-        android:maxLength="1"
         android:inputType="number"
-        app:layout_constraintRight_toLeftOf="@+id/s3"
-        app:layout_constraintLeft_toRightOf="@+id/s1"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:maxLength="1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/s1"
+        app:layout_constraintRight_toLeftOf="@+id/s3"
         app:layout_constraintTop_toBottomOf="@+id/player1"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <EditText
         android:id="@+id/s3"
-        android:layout_width="63dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:inputType="number"
         android:maxLength="1"
-        app:layout_constraintRight_toLeftOf="@+id/s4"
-        app:layout_constraintLeft_toRightOf="@+id/s2"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toRightOf="@+id/s2"
+        app:layout_constraintRight_toLeftOf="@+id/s4"
         app:layout_constraintTop_toBottomOf="@+id/player2"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <EditText
         android:id="@+id/s4"
         android:layout_width="59dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:inputType="number"
         android:maxLength="1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/s3"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/s3"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player2"
-        app:layout_constraintVertical_bias="0.16" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <Button
         android:id="@+id/submit"
@@ -70,33 +73,37 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/s2" />
+        app:layout_constraintTop_toBottomOf="@+id/s2"
+        app:layout_constraintVertical_bias="0.733" />
 
     <TextView
         android:id="@+id/player1"
-        android:layout_width="189dp"
-        android:layout_height="372dp"
+        android:layout_width="190dp"
+        android:layout_height="400dp"
+        android:background="#5d978eea"
         android:text="Player 1"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
         android:textColorLink="@android:color/black"
         android:textSize="30sp"
-        tools:layout_editor_absoluteY="0dp"
-        app:layout_constraintRight_toLeftOf="@+id/player2"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.092" />
+        app:layout_constraintRight_toLeftOf="@+id/player2"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/player2"
-        android:layout_width="197dp"
-        android:layout_height="374dp"
+        android:layout_width="190dp"
+        android:layout_height="400dp"
+        android:background="#7ecdc139"
         android:text="Player 2"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textColorLink="@android:color/black"
         android:textSize="30sp"
-        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/player1"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/player1" />
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>

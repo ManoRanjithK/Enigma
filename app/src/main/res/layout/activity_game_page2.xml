@@ -4,87 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     tools:context="com.engima.mapps.enigma.GamePage2"
-    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteY="25dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="381dp"
-        android:layout_height="303dp"
-        android:id="@+id/constraintLayout2"
-        tools:layout_editor_absoluteY="4dp"
-        tools:layout_editor_absoluteX="2dp">
 
-    </android.support.constraint.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="364dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
         android:text="Player 2 Set a 4 digit Number "
         android:textAlignment="center"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.789"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="37dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/n5"
-        android:layout_width="79dp"
-        android:layout_height="54dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
+        android:textColor="#ffffff"
         android:inputType="number"
         android:maxLength="1"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.797"
-        app:layout_constraintLeft_toRightOf="@+id/constraintLayout2"
-        app:layout_constraintRight_toLeftOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.189"
+        app:layout_constraintRight_toLeftOf="@+id/n6" />
 
     <EditText
         android:id="@+id/n6"
-        android:layout_width="74dp"
-        android:layout_height="52dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
-        android:maxLength="1"
+        android:textColor="#ffffff"
         android:inputType="number"
+        android:maxLength="1"
+        app:layout_constraintBottom_toTopOf="@+id/startgame"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.305"
         app:layout_constraintRight_toLeftOf="@+id/n7"
-        app:layout_constraintLeft_toRightOf="@+id/n5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintLeft_toRightOf="@+id/n5" />
 
     <EditText
         android:id="@+id/n7"
-        android:layout_width="77dp"
-        android:layout_height="53dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
+        android:textColor="#ffffff"
         android:inputType="number"
         android:maxLength="1"
+        app:layout_constraintBottom_toTopOf="@+id/startgame"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.305"
         app:layout_constraintRight_toLeftOf="@+id/n8"
-        app:layout_constraintLeft_toRightOf="@+id/n6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintLeft_toRightOf="@+id/n6" />
 
     <EditText
         android:id="@+id/n8"
-        android:layout_width="69dp"
-        android:layout_height="53dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:ems="10"
+        android:textColor="#ffffff"
         android:inputType="number"
         android:maxLength="1"
-        app:layout_constraintRight_toLeftOf="@+id/constraintLayout2"
-        app:layout_constraintLeft_toRightOf="@+id/constraintLayout2"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.189"
+        app:layout_constraintLeft_toRightOf="@+id/n7" />
 
     <Button
         android:id="@+id/startgame"
@@ -92,10 +92,12 @@
         android:layout_height="wrap_content"
         android:onClick="gotogame"
         android:text="Start game"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.398" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintHorizontal_bias="0.501" />
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:id="@+id/dispplay"
+        android:layout_width="376dp"
+        android:layout_height="353dp"
+        android:background="#5d978eea"
+        android:text="Your Guesses"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorLink="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/e2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <EditText
+        android:id="@+id/e1"
+        android:layout_width="69dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:maxLength="1"
+        app:layout_constraintRight_toLeftOf="@+id/e2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dispplay"
+        app:layout_constraintVertical_bias="0.317" />
+
+    <EditText
+        android:id="@+id/e2"
+        android:layout_width="73dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:maxLength="1"
+        app:layout_constraintRight_toLeftOf="@+id/e4"
+        app:layout_constraintLeft_toRightOf="@+id/e1"
+        app:layout_constraintBottom_toTopOf="@+id/Sub"
+        app:layout_constraintTop_toBottomOf="@+id/dispplay" />
+
+    <EditText
+        android:id="@+id/e3"
+        android:layout_width="81dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:maxLength="1"
+        app:layout_constraintBottom_toTopOf="@+id/Sub"
+        app:layout_constraintLeft_toRightOf="@+id/e2"
+        app:layout_constraintRight_toLeftOf="@+id/e4"
+        app:layout_constraintTop_toBottomOf="@+id/dispplay"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <EditText
+        android:id="@+id/e4"
+        android:layout_width="85dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:maxLength="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/e3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dispplay"
+
+        app:layout_constraintVertical_bias="0.275" />
+
+    <Button
+        android:id="@+id/Sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="spcmp"
+        android:text="submit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e4"
+        app:layout_constraintVertical_bias="0.869" />
+
+
+</android.support.constraint.ConstraintLayout>
